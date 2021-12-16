@@ -26,7 +26,7 @@ use RoachPHP\Shell\Repl;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Symfony\Component\EventDispatcher\EventDispatcher;
-use Symfony\Contracts\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 
 final class RoachServiceProvider extends PackageServiceProvider
 {
