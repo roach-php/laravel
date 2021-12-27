@@ -1,6 +1,6 @@
 {
     "name": "roach-php/laravel",
-    "description": "Laravel adapter for roach-php/roach",
+    "description": "Laravel adapter for roach-php/core",
     "license": "MIT",
     "type": "library",
     "authors": [
