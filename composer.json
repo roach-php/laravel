@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "roach-php/core": "dev-main",
+        "roach-php/core": "^0.1.0",
         "spatie/laravel-package-tools": "^1.9"
     },
     "require-dev": {
