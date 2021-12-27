@@ -1,6 +1,6 @@
 **IMPORTANT: While this package should be stable, it is currently in a pre-release stage. It has been published to packagist, but there
-is currently to tagged release available. If you want to play around with the package, it’s best to depend on a
-specific commit insead of `dev-main` directly.**
+is currently no tagged release available. If you want to play around with the package, it’s best to depend on a
+specific commit instead of `dev-main` directly.**
 
 # Web Scraping for Laravel
 
