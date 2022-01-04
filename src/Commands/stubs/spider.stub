@@ -7,7 +7,7 @@ use RoachPHP\Downloader\Middleware\RequestDeduplicationMiddleware;
 use RoachPHP\Extensions\LoggerExtension;
 use RoachPHP\Extensions\StatsCollectorExtension;
 use RoachPHP\Http\Response;
-use RoachPHP\ResponseProcessing\ParseResult;
+use RoachPHP\Spider\ParseResult;
 use RoachPHP\Spider\BasicSpider;
 
 class DummyClass extends BasicSpider
