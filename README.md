@@ -17,7 +17,7 @@ Check out the [full documentation](https://roach-php.dev/docs/laravel) to get up
 ## Credits
 
 - [Kai Sassnowski](https://github.com/ksassnowski)
-- [All contributors](https://github.com/roach-php/core/contributors)
+- [All contributors](https://github.com/roach-php/laravel/contributors)
 
 
 ## License
