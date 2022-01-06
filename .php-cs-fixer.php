@@ -14,6 +14,7 @@ EOF;
 
 $config = Config\Factory::fromRuleSet(new Config\RuleSet\Php80($header), [
     'php_unit_test_class_requires_covers' => false,
+    'phpdoc_to_property_type' => false,
 ]);
 
 $config->getFinder()->in(__DIR__)->exclude(['config', 'src/Commands/stubs', 'tests/Commands/__snapshots__']);
