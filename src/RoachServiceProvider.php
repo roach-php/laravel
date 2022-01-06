@@ -17,6 +17,7 @@ use RoachPHP\Core\Engine;
 use RoachPHP\Http\ClientInterface;
 use RoachPHP\ItemPipeline\ItemPipeline;
 use RoachPHP\ItemPipeline\ItemPipelineInterface;
+use RoachPHP\Laravel\Commands\RunSpiderCommand;
 use RoachPHP\Laravel\Commands\SpiderMakeCommand;
 use RoachPHP\Roach;
 use RoachPHP\Scheduling\RequestSchedulerInterface;
@@ -38,6 +39,7 @@ final class RoachServiceProvider extends PackageServiceProvider
             ->hasCommands([
                 SpiderMakeCommand::class,
                 Repl::class,
+                RunSpiderCommand::class,
             ]);
     }
 
