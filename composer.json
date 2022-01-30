@@ -20,8 +20,7 @@
         "orchestra/testbench": "^6.20 || ^7.0",
         "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-latest",
-        "spatie/phpunit-snapshot-assertions": "^4.2",
-        "spatie/phpunit-watcher": "^1.23"
+        "spatie/phpunit-snapshot-assertions": "^4.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
