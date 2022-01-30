@@ -34,6 +34,11 @@
             "RoachPHP\\Laravel\\Tests\\": "tests/"
         }
     },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
