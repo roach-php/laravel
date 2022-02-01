@@ -15,13 +15,10 @@ namespace RoachPHP\Laravel\Commands;
 
 use Illuminate\Console\Command;
 use RoachPHP\Roach;
-use function class_exists;
-use function str_starts_with;
 
 final class RunSpiderCommand extends Command
 {
     protected $signature = 'roach:run {spider}';
-
     protected $description = 'Run the provided spider';
 
     public function handle(): int
@@ -33,7 +30,7 @@ final class RunSpiderCommand extends Command
         }
 
         if (!\class_exists($spiderClass)) {
-            $this->error("Unknown spider $spiderClass.");
+            $this->error("Unknown spider {$spiderClass}.");
 
             return self::FAILURE;
         }
