@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace RoachPHP\Laravel;
 
+use Illuminate\Foundation\Application;
 use RoachPHP\Core\Engine;
 use RoachPHP\Http\ClientInterface;
 use RoachPHP\ItemPipeline\ItemPipeline;
@@ -48,8 +49,14 @@ final class RoachServiceProvider extends PackageServiceProvider
         $this->app->bind(Engine::class, Engine::class);
         $this->app->singleton(EventDispatcher::class, EventDispatcher::class);
         $this->app->singleton(EventDispatcherInterface::class, EventDispatcher::class);
-        $this->app->bind(ClientInterface::class, config('roach.client'));
-        $this->app->bind(RequestSchedulerInterface::class, config('roach.request_queue'));
+        $this->app->bind(
+            ClientInterface::class,
+            static fn (Application $app) => $app->make(config('roach.client')),
+        );
+        $this->app->bind(
+            RequestSchedulerInterface::class,
+            static fn (Application $app) => $app->make(config('roach.request_queue')),
+        );
         $this->app->bind(ClockInterface::class, SystemClock::class);
         $this->app->bind(ItemPipelineInterface::class, ItemPipeline::class);
     }
