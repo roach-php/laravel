@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace RoachPHP\Laravel\Commands;
 
 use Illuminate\Console\GeneratorCommand;
+use Symfony\Component\Console\Input\InputOption;
 
 final class SpiderMakeCommand extends GeneratorCommand
 {
@@ -29,5 +30,12 @@ final class SpiderMakeCommand extends GeneratorCommand
     protected function getDefaultNamespace($rootNamespace): string
     {
         return $rootNamespace . '\Spiders';
+    }
+    
+    protected function getOptions()
+    {
+        return [
+            ['force', null, InputOption::VALUE_NONE, 'Create the class even if the spider already exists'],
+        ];
     }
 }
