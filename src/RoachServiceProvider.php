@@ -15,16 +15,19 @@ namespace RoachPHP\Laravel;
 
 use Illuminate\Foundation\Application;
 use RoachPHP\Core\Engine;
+use RoachPHP\Core\EngineInterface;
+use RoachPHP\Core\Runner;
+use RoachPHP\Core\RunnerInterface;
 use RoachPHP\Http\ClientInterface;
 use RoachPHP\ItemPipeline\ItemPipeline;
 use RoachPHP\ItemPipeline\ItemPipelineInterface;
-use RoachPHP\Shell\Repl;
-use RoachPHP\Shell\Commands\RunSpiderCommand;
 use RoachPHP\Laravel\Commands\SpiderMakeCommand;
 use RoachPHP\Roach;
 use RoachPHP\Scheduling\RequestSchedulerInterface;
 use RoachPHP\Scheduling\Timing\ClockInterface;
 use RoachPHP\Scheduling\Timing\SystemClock;
+use RoachPHP\Shell\Commands\RunSpiderCommand;
+use RoachPHP\Shell\Repl;
 use RoachPHP\Shell\Resolver\DefaultNamespaceResolverDecorator;
 use RoachPHP\Shell\Resolver\NamespaceResolverInterface;
 use RoachPHP\Shell\Resolver\StaticNamespaceResolver;
@@ -49,7 +52,8 @@ final class RoachServiceProvider extends PackageServiceProvider
 
     public function registeringPackage(): void
     {
-        $this->app->bind(Engine::class, Engine::class);
+        $this->app->bind(EngineInterface::class, Engine::class);
+        $this->app->bind(RunnerInterface::class, Runner::class);
         $this->app->singleton(EventDispatcher::class, EventDispatcher::class);
         $this->app->singleton(EventDispatcherInterface::class, EventDispatcher::class);
         $this->app->bind(

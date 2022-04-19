@@ -31,7 +31,7 @@ final class SpiderMakeCommand extends GeneratorCommand
     {
         return config('roach.default_spider_namespace', $rootNamespace . '\Spiders');
     }
-    
+
     protected function getOptions()
     {
         return [
