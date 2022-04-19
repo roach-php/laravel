@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75362984694d7ca918085b97089d22db",
+    "content-hash": "47cf5f5aa29ae79769d009895ec12616",
     "packages": [
         {
             "name": "brick/math",
@@ -2714,16 +2714,16 @@
         },
         {
             "name": "roach-php/core",
-            "version": "dev-main",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/roach-php/core.git",
-                "reference": "1574c21936272a30a14ccaab0006ab80e885746c"
+                "reference": "59dfc000c3db7ce1b857f940165bc380aa6a8817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roach-php/core/zipball/1574c21936272a30a14ccaab0006ab80e885746c",
-                "reference": "1574c21936272a30a14ccaab0006ab80e885746c",
+                "url": "https://api.github.com/repos/roach-php/core/zipball/59dfc000c3db7ce1b857f940165bc380aa6a8817",
+                "reference": "59dfc000c3db7ce1b857f940165bc380aa6a8817",
                 "shasum": ""
             },
             "require": {
@@ -2757,7 +2757,6 @@
             "suggest": {
                 "spatie/browsershot": "Required to execute Javascript in spiders"
             },
-            "default-branch": true,
             "bin": [
                 "roach"
             ],
@@ -2780,7 +2779,7 @@
             "description": "A complete web scraping toolkit for PHP",
             "support": {
                 "issues": "https://github.com/roach-php/core/issues",
-                "source": "https://github.com/roach-php/core/tree/main"
+                "source": "https://github.com/roach-php/core/tree/1.0.0"
             },
             "funding": [
                 {
@@ -2788,7 +2787,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-19T19:04:28+00:00"
+            "time": "2022-04-19T19:43:36+00:00"
         },
         {
             "name": "sebastian/version",
@@ -10238,7 +10237,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "roach-php/core": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
