@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Added support for `roach-php/core:^1.0`
+- Added `force (-f)` optioni to `roach:spider` command (@josezenem, #9)
 - Added `default_spider_namespace` configuration option. This option is used by both the
   `roach:spider` and `roach:run` commands
 
