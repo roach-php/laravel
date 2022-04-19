@@ -25,6 +25,9 @@ use RoachPHP\Scheduling\Timing\ClockInterface;
 use RoachPHP\Scheduling\Timing\SystemClock;
 use RoachPHP\Shell\Commands\RunSpiderCommand;
 use RoachPHP\Shell\Repl;
+use RoachPHP\Shell\Resolver\DefaultNamespaceResolverDecorator;
+use RoachPHP\Shell\Resolver\NamespaceResolverInterface;
+use RoachPHP\Shell\Resolver\StaticNamespaceResolver;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Symfony\Component\EventDispatcher\EventDispatcher;
@@ -59,6 +62,13 @@ final class RoachServiceProvider extends PackageServiceProvider
         );
         $this->app->bind(ClockInterface::class, SystemClock::class);
         $this->app->bind(ItemPipelineInterface::class, ItemPipeline::class);
+        $this->app->bind(
+            NamespaceResolverInterface::class,
+            static fn (Application $app) => new DefaultNamespaceResolverDecorator(
+                new StaticNamespaceResolver(),
+                config('roach.default_spider_namespace', 'App\Spiders'),
+            ),
+        );
     }
 
     public function bootingPackage(): void

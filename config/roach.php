@@ -31,4 +31,14 @@ return [
     */
     'client' => Client::class,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Default Spider Namespace
+    |--------------------------------------------------------------------------
+    |
+    | The default namespace the `roach:run` command uses to find spider
+    | classes. This should not contain leading or trailing backslashes.
+    |
+    */
+    'default_spider_namespace' => 'App\Spiders',
 ];
