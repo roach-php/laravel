@@ -34,7 +34,7 @@ final class RegisterDefaultNamespaceTest extends TestCase
         config(['roach.default_spider_namespace' => 'RoachPHP\Laravel\Tests\Fixtures']);
         $runner = Roach::fake();
 
-        Artisan::call('run', ['spider' => 'TestSpider']);
+        Artisan::call('roach:run', ['spider' => 'TestSpider']);
 
         $runner->assertRunWasStarted(TestSpider::class);
     }

@@ -18,13 +18,13 @@ use RoachPHP\Core\Engine;
 use RoachPHP\Http\ClientInterface;
 use RoachPHP\ItemPipeline\ItemPipeline;
 use RoachPHP\ItemPipeline\ItemPipelineInterface;
+use RoachPHP\Laravel\Commands\ReplCommand;
+use RoachPHP\Laravel\Commands\RunSpiderCommand;
 use RoachPHP\Laravel\Commands\SpiderMakeCommand;
 use RoachPHP\Roach;
 use RoachPHP\Scheduling\RequestSchedulerInterface;
 use RoachPHP\Scheduling\Timing\ClockInterface;
 use RoachPHP\Scheduling\Timing\SystemClock;
-use RoachPHP\Shell\Commands\RunSpiderCommand;
-use RoachPHP\Shell\Repl;
 use RoachPHP\Shell\Resolver\DefaultNamespaceResolverDecorator;
 use RoachPHP\Shell\Resolver\NamespaceResolverInterface;
 use RoachPHP\Shell\Resolver\StaticNamespaceResolver;
@@ -42,7 +42,7 @@ final class RoachServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasCommands([
                 SpiderMakeCommand::class,
-                Repl::class,
+                ReplCommand::class,
                 RunSpiderCommand::class,
             ]);
     }
