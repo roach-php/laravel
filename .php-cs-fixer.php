@@ -17,7 +17,9 @@ $config = Config\Factory::fromRuleSet(new Config\RuleSet\Php80($header), [
     'phpdoc_to_property_type' => false,
 ]);
 
-$config->getFinder()->in(__DIR__)->exclude(['config', 'src/Commands/stubs', 'tests/Commands/__snapshots__']);
+$config->getFinder()
+    ->in(__DIR__)
+    ->exclude(['config', 'src/Commands/stubs', 'tests/__snapshots__']);
 $config->setCacheFile(__DIR__ . '/.build/php-cs-fixer/.php-cs-fixer.cache');
 
 return $config;
