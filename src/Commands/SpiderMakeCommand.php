@@ -29,7 +29,7 @@ final class SpiderMakeCommand extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace): string
     {
-        return $rootNamespace . '\Spiders';
+        return config('roach.default_spider_namespace', $rootNamespace . '\Spiders');
     }
     
     protected function getOptions()
