@@ -36,8 +36,9 @@ return [
     | Default Spider Namespace
     |--------------------------------------------------------------------------
     |
-    | The default namespace the `roach:run` command uses to find spider
-    | classes. This should not contain leading or trailing backslashes.
+    | The default namespace the `roach:run` and `roach:spider` commands use
+    | to determine the namespace of spider classes. This should not contain
+    | leading or trailing backslashes.
     |
     */
     'default_spider_namespace' => 'App\Spiders',
