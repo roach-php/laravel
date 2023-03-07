@@ -1,0 +1,12 @@
+# Path-based git attributes
+# https://www.kernel.org/pub/software/scm/git/docs/.html
+
+# Ignore all test and documentation with "export-ignore".
+/.gitattributes          export-ignore
+/.github                 export-ignore
+/.git-blame-ignore-refs  export-ignore
+/.gitignore              export-ignore
+/.php-cs-fixer.php       export-ignore
+/phpunit.xml.dist        export-ignore
+/tests                   export-ignore
+/.editorconfig           export-ignore
