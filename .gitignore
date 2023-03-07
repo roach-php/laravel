@@ -1,3 +1,4 @@
 .build/
 .phpunit.cache
 vendor/
+phpunit.xml
