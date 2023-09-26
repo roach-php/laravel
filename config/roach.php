@@ -42,4 +42,16 @@ return [
     |
     */
     'default_spider_namespace' => 'App\Spiders',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Default Processor Namespace
+    |--------------------------------------------------------------------------
+    |
+    | The default namespace the `roach:processor` commands use
+    | to determine the namespace of processor classes. This should not contain
+    | leading or trailing backslashes.
+    |
+    */
+    'default_processor_namespace' => 'App\Spiders\Processors',
 ];
