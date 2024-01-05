@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added support for PHP 8.3
 
+### Removed
+
+- Dropped Laravel 9 support
+
 ## [2.0.0] – 2022-02-06
 
 ### Added
