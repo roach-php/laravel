@@ -35,7 +35,12 @@ final class SpiderMakeCommand extends GeneratorCommand
     protected function getOptions()
     {
         return [
-            ['force', null, InputOption::VALUE_NONE, 'Create the class even if the spider already exists'],
+            [
+                'force',
+                null,
+                InputOption::VALUE_NONE,
+                'Create the class even if the spider already exists',
+            ],
         ];
     }
 }
