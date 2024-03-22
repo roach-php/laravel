@@ -8,12 +8,21 @@ jobs:
     strategy:
       matrix:
         php: [8.1, 8.2, 8.3]
-        laravel: [10.*]
+        laravel: [^10, ^11]
         dependency-version: [prefer-stable]
         os: [ubuntu-latest]
+        exclude:
+          - laravel: ^11
+            php: 8.1
         include:
-          - laravel: 10.*
-            testbench: ^8.0
+          - laravel: ^10
+            testbench: ^8
+            phpunit: ^10
+            core: ^2
+          - laravel: ^11
+            testbench: ^9
+            phpunit: ^11
+            core: ^3
 
     name: P${{ matrix.php }} - L${{ matrix.laravel}} - ${{ matrix.dependency-version }} - ${{ matrix.os }}
 
@@ -35,7 +44,10 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
+          composer require "orchestra/testbench:${{ matrix.testbench }}" --dev --no-interaction --no-update
+          composer require "phpunit/phpunit:${{ matrix.phpunit }}" --dev --no-interaction --no-update
+          composer require "laravel/framework:${{ matrix.laravel }}" --no-interaction --no-update
+          composer require "roach-php/core:${{ matrix.core }}" --no-interaction --no-update
           composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction
 
       - name: Execute tests
