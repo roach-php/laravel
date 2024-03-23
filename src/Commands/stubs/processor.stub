@@ -1,0 +1,24 @@
+<?php
+
+use RoachPHP\ItemPipeline\ItemInterface;
+use RoachPHP\ItemPipeline\Processors\ItemProcessorInterface;
+use RoachPHP\Support\Configurable;
+
+class DummyClass implements ItemProcessorInterface
+{
+    use Configurable;
+
+    public function processItem(ItemInterface $item): ItemInterface
+    {
+        // todo...
+    }
+  
+    private function defaultOptions(): array
+    {
+        // If not overwritten by the user, the default values
+        // from here will be used
+        return [
+            // todo...
+        ];
+    }
+}
